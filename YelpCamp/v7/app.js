@@ -8,7 +8,8 @@ var express       = require("express"),
     Comment       = require("./models/comment"),
     User          = require("./models/user"),
     seedDB        = require("./seeds");
-
+    
+//require routes
 var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index")
