@@ -1,0 +1,83 @@
+body {
+    background-color: #000;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+    color: #fff;
+}
+
+.slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/883132030716180698/7695667604E82FB22D5BD6A16A1E7ACA526EEC36/) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/495765386222828804/A835E1FB587648FFE8321F56A5C2811B242AF72F/);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/46478202413815727/6C31B0E53CBC386BCBEE2AA32681E7F224EA1607/);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/776058160472387811/7993E65889576D89E2960F8A046343BF9A4C169B/);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/486684882585805033/5C43569FE76B1B9FF9BB490FE2E70FB3D9C70CED/);
+    animation-delay: 40s; 
+}
+  
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
